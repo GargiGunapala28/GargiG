@@ -1,0 +1,171 @@
+/*indexx.html*/
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .left-column {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    flex: 1;
+  }
+
+  .left-column h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3rem;
+  }
+
+  .left-column h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 4rem;
+  }
+
+  .left-column button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1cm;
+    margin-right: 0.3cm;
+  }
+
+  .right-column {
+    background-color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content:center;
+    margin-top: 0px;
+    width:100%;
+    background-color: #F4EAE0;
+  }
+
+  .contact-links a{
+    color: black;
+  }
+
+  .contact-links div {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 3cm;
+    padding-bottom: 3cm;
+    padding-left: 4.1cm;
+    padding-right: 4cm;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+/*resume.html*/
+.resume{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#f5f5dc;
+}
+
+.container {
+    width:max-content;
+    margin-top: 1cm;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2cm;
+    padding-right: 2cm;
+    padding-bottom: 2cm;
+    padding-top: 1cm;
+    background-color: white;
+}
+
+.container h1{
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.container p {
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .resume-button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    animation: slideIn 1s ease-in-out;
+  }
+
+  .resume-button:hover {
+    background-color: #444;
+  }
+
+  .education {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin-top: 1cm;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: max-content;
+  }
+
+  .education h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-top: 1cm;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .education-items{
+    display: flex;
+    justify-content:center;
+    background-color: black;
+    padding-left: -1cm;
+  }
+
+  .education-items div {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1cm 3cm;
+    border-collapse: collapse;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .education-items div li{
+    text-align: left;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
