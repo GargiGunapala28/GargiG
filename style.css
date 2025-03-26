@@ -1,4 +1,4 @@
-/*indexx.html*/
+/*index.html*/
 body {
   height: 100vh;
   display: flex;
@@ -315,3 +315,34 @@ label #cancel:hover {
   list-style: none;
   text-decoration: none;
 }
+
+/* projects */
+.projects {
+  background-color: #f5f5dc;
+  margin: 0;
+  padding: 0;
+}
+
+#project-heading {
+  text-align: center;
+}
+
+/* .col-md-4 img {
+  width: 600px;
+  height: 100%;
+  padding-left: 0;
+}
+
+.card-text button {
+  padding: 0.5cm;
+  opacity: 0;
+}
+
+#box1 {
+  margin-top: 2cm;
+  text-align: center;
+  margin-left: 8cm;
+  color: white;
+  background-color: #000;
+  width: 920px;
+} */
