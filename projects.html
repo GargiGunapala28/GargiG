@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
+    <title>PROJECTS</title>
+    <link src="./style.css" rel="stylesheet" />
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,38 +14,36 @@
       rel="stylesheet"
     />
     <script src="./javascript.js"></script>
-    <title>ABOUT ME</title>
   </head>
-  <body id="top">
-    <div class="container-fluid d-flex p-0">
-      <div class="left-column">
-        <h1>Hey, I'm</h1>
-        <h2>Gargi G</h2>
-        <div>
-          <button class="btn btn-light" onclick="location.href='resume.html'">
-            RESUME
-          </button>
-          <button class="btn btn-light">PROJECTS</button>
-          <button
-            class="btn btn-light"
-            id="scrollToContact"
-            onclick="scrollToContact()"
-          >
-            CONTACT
-          </button>
-        </div>
-      </div>
-      <div class="right-column">
-        <img
-          src="./images/profile.png"
-          alt="Profile"
-          width="70%"
-          height="auto"
-          float="left"
-        />
-      </div>
+  <body>
+    <!-- navbar -->
+    <input type="checkbox" id="check" />
+    <label for="check" style="list-style: none; text-decoration: none">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="./index.html" style="margin-top: 70px"><i></i>About me</a>
+        </li>
+        <li>
+          <a href="./resume.html"><i></i>Resume</a>
+        </li>
+        <li>
+          <a href="#"><i></i>Projects</a>
+        </li>
+        <li>
+          <a href="#contacts"><i></i>Contact Me</a>
+        </li>
+      </ul>
     </div>
+    <section></section>
 
+    <!--body-->
+    <h1>PROJECTS</h1>
+
+    <!--contact me-->
     <div class="contact-links" id="contacts">
       <div>
         <a href="https://www.linkedin.com/in/gargi-g2710282909/"
@@ -72,8 +71,5 @@
         </button>
       </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
