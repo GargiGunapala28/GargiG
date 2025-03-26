@@ -1,171 +1,317 @@
 /*indexx.html*/
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
-  .left-column {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    flex: 1;
-  }
+.left-column {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex: 1;
+}
 
-  .left-column h1{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 3rem;
-  }
+.left-column h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+}
 
-  .left-column h2{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 4rem;
-  }
+.left-column h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4rem;
+}
 
-  .left-column button{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 1cm;
-    margin-right: 0.3cm;
-  }
+.left-column button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 1cm;
+  margin-right: 0.3cm;
+}
 
-  .right-column {
-    background-color: #f5f5dc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
+.right-column {
+  background-color: #f5f5dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
 
-  .contact-links {
-    display: flex;
-    justify-content:center;
-    margin-top: 0px;
-    width:100%;
-    background-color: #F4EAE0;
-  }
+.contact-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  width: 100%;
+  background-color: #F4EAE0;
+}
 
-  .contact-links a{
-    color: black;
-  }
+.contact-links a:hover {
+  font-size: 1.8rem;
+  color: #444;
+}
 
-  .contact-links div {
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 3cm;
-    padding-bottom: 3cm;
-    padding-left: 4.1cm;
-    padding-right: 4cm;
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
+.contact-links a {
+  color: black;
+}
+
+.contact-links div {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 3cm;
+  padding-bottom: 3cm;
+  padding-left: 4.1cm;
+  padding-right: 4cm;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#backtoTop {
+  position: static;
+  width: fit-content;
+  height: auto;
+  padding: 0.2cm 0.3cm;
+  font-size: 1rem;
+  box-shadow: 2px 0px rgba(0, 0, 0, 0.671);
+}
 
 /*resume.html*/
-.resume{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:#f5f5dc;
+.resume {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5dc;
 }
 
 .container {
-    width:max-content;
-    margin-top: 1cm;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2cm;
-    padding-right: 2cm;
-    padding-bottom: 2cm;
-    padding-top: 1cm;
-    background-color: white;
+  width: max-content;
+  margin-top: 1cm;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  padding-bottom: 2cm;
+  padding-top: 1cm;
+  background-color: white;
 }
 
-.container h1{
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
+.container h1 {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .container p {
-    line-height: 1.6;
-    text-align: justify;
+  line-height: 1.6;
+  text-align: justify;
+  padding-left: 4cm;
+}
+
+.resume-button {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  animation: slideIn 1s ease-in-out;
+  margin-left: 4cm;
+}
+
+.resume-button:hover {
+  background-color: #444;
+}
+
+.education {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin-top: 1cm;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: max-content;
+}
+
+.education h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 1cm;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.education-items {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-left: -1cm;
+}
+
+.education-items div {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1cm 3cm;
+  border-collapse: collapse;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.education-items div li {
+  text-align: left;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 
-  .resume-button {
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    animation: slideIn 1s ease-in-out;
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
 
-  .resume-button:hover {
-    background-color: #444;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-  .education {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    margin-top: 1cm;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: max-content;
-  }
+/*navbar*/
 
-  .education h2 {
-    text-align: center;
-    font-size: 1.7rem;
-    margin-top: 1cm;
-    animation: fadeIn 2s ease-in-out;
-  }
+.sidebar {
+  position: fixed;
+  display: none;
+  right: -250px;
+  /* Change from left to right */
+  width: 350px;
+  height: 100%;
+  background: #2c3031;
+}
 
-  .education-items{
-    display: flex;
-    justify-content:center;
-    background-color: black;
-    padding-left: -1cm;
-  }
+.sidebar ul li {
+  list-style: none;
+  text-decoration: none;
+}
 
-  .education-items div {
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 1cm 3cm;
-    border-collapse: collapse;
-    color: white;
-    animation: fadeIn 2s ease-in-out;
-  }
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 85px;
+  font-size: 20px;
+  color: white;
+  padding-left: 70px;
+  box-sizing: border-box;
+  transition: .4s;
+  list-style: none;
+  text-decoration: none;
+}
 
-  .education-items div li{
-    text-align: left;
-  }
+ul li:hover a {
+  padding-left: 90px;
+  list-style: none;
+  text-decoration: none;
+}
 
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+.sidebar ul a i {
+  margin-right: 16px;
+  list-style: none;
+  text-decoration: none;
+}
 
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+#check {
+  display: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+label #btn {
+  position: absolute;
+  background: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
+
+label #cancel {
+  position: fixed;
+  background: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
+
+label #btn {
+  right: 220px;
+  /* Align button to the right */
+  top: 55px;
+  font-size: 25px;
+  color: white;
+  padding: 16px 16px;
+  transition: all .5s;
+  border-radius: 50%;
+  list-style: none;
+  text-decoration: none;
+}
+
+label #cancel {
+  z-index: 1111;
+  display: none;
+  /*right: 20px;  Align cancel button to the right */
+  top: 17px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 9px 12px;
+  transition: all .5s ease;
+  border-radius: 50%;
+  list-style: none;
+  text-decoration: none;
+}
+
+label #cancel:hover {
+  background-color: #313334;
+  padding: 9px 12px;
+  border-radius: 50%;
+  border: #000000 1px solid;
+}
+
+#check:checked~.sidebar {
+  right: 0;
+  /* Change from left to right */
+  display: list-item;
+  transition: all .5s ease;
+  list-style: none;
+  text-decoration: none;
+}
+
+#check:checked~label #btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked~label #cancel {
+  right: 20px;
+  /* Align cancel button to the right */
+  display: list-item;
+}
+
+#check:checked~section {
+  margin-right: 250px;
+  /* Change from margin-left to margin-right */
+  list-style: none;
+  text-decoration: none;
+}

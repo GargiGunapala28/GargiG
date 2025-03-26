@@ -5,9 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
     <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="resume">
+  <body class="resume" id="top">
+    <!-- navbar -->
+    <input type="checkbox" id="check" />
+    <label for="check" style="list-style: none; text-decoration: none">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="./index.html" style="margin-top: 70px"><i></i>About me</a>
+        </li>
+        <li>
+          <a href="./resume.html"><i></i>Resume</a>
+        </li>
+        <li>
+          <a href="#"><i></i>Projects</a>
+        </li>
+        <li>
+          <a href="#contacts"><i></i>Contact Me</a>
+        </li>
+      </ul>
+    </div>
+    <section></section>
+
     <div class="container">
       <h1>About Me</h1>
       <p>
@@ -30,7 +62,7 @@
       <h2>EDUCATION</h2>
       <div class="education-items">
         <div>
-          <ul style="list-style-type: none">
+          <ul style="list-style-type: none; line-height: 3">
             <li>
               <h6>2022-2024</h6>
               <h5>Master of Computer Applications (MCA)</h5>
@@ -49,7 +81,12 @@
         </div>
 
         <div>
-          <ul style="line-height: 1.7; list-style-type: disc">
+          <ul
+            style="
+              line-height: 1.7;
+              list-style-image: url('./images/footprint_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
+            "
+          >
             <li>
               <p style="font-size: 1.1rem">
                 College: The National Institute of Engineering (NIE), Mysuru.<br />
@@ -57,7 +94,7 @@
                 University: Visvesvaraya Technological University, Belagavi.
               </p>
             </li>
-            <br />
+
             <li>
               <p style="font-size: 1.1rem">
                 College: Sri K Puttaswamy First Grade College, Mysuru. <br />
@@ -65,7 +102,7 @@
                 University: University Of Mysore, Mysuru.
               </p>
             </li>
-            <br />
+
             <li>
               <p style="font-size: 1.1rem">
                 College: Gopalaswamy SV PU College, Mysuru. <br />
@@ -80,7 +117,7 @@
 
     <br />
 
-    <div class="contact-links">
+    <div class="contact-links" id="contacts">
       <div>
         <a href="https://www.linkedin.com/in/gargi-g2710282909/"
           ><i class="fab fa-linkedin"></i></a
@@ -102,7 +139,17 @@
           ><i class="fab fa-github"></i></a
         ><br />
         GitHub
+        <button id="backtoTop" onclick="backtoTop()">
+          <i class="fa fa-solid fa-arrow-up"></i>
+        </button>
       </div>
     </div>
+
+    <script>
+      function backtoTop() {
+        const topsection = document.getElementById("top");
+        topsection.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
   </body>
 </html>
