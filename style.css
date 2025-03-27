@@ -46,7 +46,7 @@ body {
   justify-content: center;
   margin-top: 0px;
   width: 100%;
-  background-color: #F4EAE0;
+  background-color: #F4DFC8;
 }
 
 .contact-links a:hover {
@@ -191,6 +191,7 @@ body {
 /*navbar*/
 
 .sidebar {
+  z-index: 1110;
   position: fixed;
   display: none;
   right: -250px;
@@ -318,31 +319,194 @@ label #cancel:hover {
 
 /* projects */
 .projects {
-  background-color: #f5f5dc;
+  background-color: #F4EAE0;
   margin: 0;
-  padding: 0;
 }
 
 #project-heading {
   text-align: center;
+  margin-top: 1cm;
 }
 
-/* .col-md-4 img {
-  width: 600px;
+/*Proects card*/
+.card-container {
+  position: relative;
+  width: 920px;
+  height: 290px;
+  text-align: left;
+  background-color: black;
+  margin-top: 2cm;
+  margin-left: 300px;
+  border-radius: 15px;
+  margin-bottom: 2cm;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.534);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  padding-left: 0;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.card-text button {
-  padding: 0.5cm;
+.card-front {
+  /* background: black; */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.card-back {
+  /* background: black; */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
   opacity: 0;
 }
 
-#box1 {
-  margin-top: 2cm;
+.card-container:hover .card-front {
+  opacity: 0;
+}
+
+.card-container:hover .card-back {
+  opacity: 1;
+}
+
+.knowmore {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.knowmore :hover {
+  background-color: rgb(0, 34, 255);
+}
+
+.card-front img,
+.card-back img {
+  border-radius: 15px;
+}
+
+/*utt-anthariya*/
+.project-1 {
+  background-color: #F4DFC8;
+  margin: 0;
+}
+
+.project-1 h1 {
   text-align: center;
-  margin-left: 8cm;
-  color: white;
-  background-color: #000;
-  width: 920px;
-} */
+}
+
+.project-1 p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.project-1 hr {
+  width: 2cm;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.project-1 button {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 20px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+/*flex*/
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  border: #000 1px solid;
+}
+
+.flex-item-left {
+  background-color: #ffffff;
+  /* padding: 10px; */
+  flex: 50%;
+  border-right: #000 1px solid;
+}
+
+.flex-item-left img {
+  width: 90%;
+  height: auto;
+}
+
+.flex-item-right {
+  background-color: #F4EAE0;
+  flex: 50%;
+}
+
+.flex-item-right p {
+  margin: 40px;
+  text-align: left;
+  margin-top: 3.2cm;
+}
+
+.flex-item-right ul li {
+  font-size: 1.3rem;
+  text-align: left;
+  margin: 40px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/*utt-anthariya card*/
+.card-container-u {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  max-width: 600px;
+  max-height: 300px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.534);
+  background-color: #F4EAE0;
+}
+
+.card-item-left-u {
+  background-color: #ffffff;
+  /* padding: 10px; */
+  flex: 95%;
+  border-right: #000 1px solid;
+  border-radius: 15px;
+}
+
+.card-item-left-u img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.card-item-right-u {
+  background-color: #F4EAE0;
+  flex: 5%;
+  border-radius: 15px;
+}
+
+.card-item-right-u p {
+  margin: 40px;
+  text-align: left;
+  margin-top: 3.2cm;
+}
