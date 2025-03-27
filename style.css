@@ -403,11 +403,14 @@ label #cancel:hover {
 
 .project-1 h1 {
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 3rem;
 }
 
 .project-1 p {
   text-align: center;
   font-size: 1.3rem;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .project-1 hr {
@@ -423,6 +426,16 @@ label #cancel:hover {
   padding: 15px 20px;
   margin-left: 50px;
   margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+  .project-1 p {
+    font-size: 1rem;
+  }
+
+  .project-1 h1 {
+    font-size: 2rem;
+  }
 }
 
 /*flex*/
@@ -445,6 +458,7 @@ label #cancel:hover {
 .flex-item-left img {
   width: 90%;
   height: auto;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .flex-item-right {
@@ -464,6 +478,12 @@ label #cancel:hover {
   margin: 40px;
 }
 
+@media (max-width: 800px) {
+  .flex-item-right p {
+    font-size: 1.3rem;
+  }
+}
+
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
   .flex-container {
@@ -472,21 +492,32 @@ label #cancel:hover {
 }
 
 /*utt-anthariya card*/
+.container-card {
+  display: grid;
+  grid-template-columns: 700px 700px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: #F4DFC8;
+}
+
 .card-container-u {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   font-size: 30px;
   text-align: center;
-  max-width: 600px;
-  max-height: 300px;
+  max-width: 900px;
+  max-height: 600px;
   margin: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.534);
-  background-color: #F4EAE0;
+  background-color: #313334;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .card-item-left-u {
-  background-color: #ffffff;
+  background-color: #313334;
   /* padding: 10px; */
   flex: 95%;
   border-right: #000 1px solid;
@@ -500,13 +531,32 @@ label #cancel:hover {
 }
 
 .card-item-right-u {
-  background-color: #F4EAE0;
-  flex: 5%;
+  background-color: #313334;
+  color: white;
   border-radius: 15px;
 }
 
 .card-item-right-u p {
-  margin: 40px;
-  text-align: left;
+  /* margin: 40px; */
+  text-align: right;
   margin-top: 3.2cm;
+  writing-mode: vertical-lr;
+}
+
+#backtotopButton {
+  position: relative;
+  width: max-content;
+  height: auto;
+  padding: 0.2cm 0.3cm;
+  font-size: 1rem;
+  box-shadow: 2px 0px rgba(0, 0, 0, 0.671);
+  float: right;
+  margin-right: 0.5cm;
+  margin-bottom: 0.5cm;
+}
+
+@media (max-width: 642px) {
+  .container-card {
+    grid-template-columns: 500px;
+  }
 }
