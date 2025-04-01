@@ -7,3 +7,4 @@ function scrollToContact() {
     const contactSection = document.getElementById("contacts");
     contactSection.scrollIntoView({ behavior: "smooth" });
 }
+

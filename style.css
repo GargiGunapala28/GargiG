@@ -408,9 +408,13 @@ label #cancel:hover {
 }
 
 .project-1 p {
-  text-align: center;
+  /* text-align: center; */
+  text-align: justify;
   font-size: 1.3rem;
   animation: fadeIn 0.5s ease-in-out;
+  margin: 40px 100px;
+  padding: 0 100px;
+  line-height: 1.5;
 }
 
 .project-1 hr {
@@ -426,16 +430,6 @@ label #cancel:hover {
   padding: 15px 20px;
   margin-left: 50px;
   margin-top: 30px;
-}
-
-@media (max-width: 800px) {
-  .project-1 p {
-    font-size: 1rem;
-  }
-
-  .project-1 h1 {
-    font-size: 2rem;
-  }
 }
 
 /*flex*/
@@ -479,15 +473,8 @@ label #cancel:hover {
 }
 
 @media (max-width: 800px) {
-  .flex-item-right p {
-    font-size: 1.3rem;
-  }
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
+  .flex-item-right ul li {
+    font-size: 1rem;
   }
 }
 
@@ -555,8 +542,277 @@ label #cancel:hover {
   margin-bottom: 0.5cm;
 }
 
-@media (max-width: 642px) {
+@media (max-width: 800px) {
+  .project-1 p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 10px;
+  }
+
+  .project-1 h1 {
+    font-size: 2rem;
+  }
+
+  .project-1 button {
+    margin-left: 10px;
+    padding: 10px 15px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  /* .flex-item-left img {
+    width: 100%;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+  } */
+
   .container-card {
-    grid-template-columns: 500px;
+    grid-template-columns: 450px;
+  }
+
+  .card-item-right-u p {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+
+/*Seminar*/
+.seminar {
+  background-color: #F4DFC8;
+  margin: 0;
+}
+
+.seminar h1 {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.8rem;
+  margin-left: 80px;
+  margin-top: 30px;
+  margin-right: 80px;
+  padding: 0 90px;
+}
+
+.seminar p {
+  text-align: justify;
+  font-size: 1.3rem;
+  animation: fadeIn 0.5s ease-in-out;
+  margin: 40px 100px;
+  padding: 0 100px;
+  line-height: 1.5;
+}
+
+.seminar hr {
+  width: 2cm;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.seminar button {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 20px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+  .seminar p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 20px;
+  }
+
+  .seminar h1 {
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+
+  .seminar button {
+    margin-left: 10px;
+    padding: 10px 15px;
+  }
+}
+
+/* slider */
+#slider {
+  margin: 0 auto;
+  width: 1000px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#slider input[type=radio] {
+  display: none;
+}
+
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#slides {
+  padding: 0px;
+  border: 3px solid #ccc;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slide1:checked~#slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked~#slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked~#slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked~#slides .inner {
+  margin-left: -300%;
+}
+
+#slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  width: 400%;
+  line-height: 0;
+  height: auto;
+}
+
+#slides .inner img {
+  width: 100%;
+  height: auto;
+}
+
+#slides .slide {
+  width: 25%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+/* #slides .slide_1 {
+  background: url('./images/seminar/1.png');
+} */
+
+/* #slides .slide_2 {
+  background: url('./images/seminar/2.png');
+}
+
+#slides .slide_3 {
+  background: url('./images/seminar/3.png');
+}
+
+#slides .slide_4 {
+  background: url('./images/seminar/4.png');
+} */
+
+#controls {
+  margin: -180px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+}
+
+#controls label:hover {
+  opacity: 1;
+}
+
+#slide1:checked~#controls label:nth-child(2),
+/* #slide1:checked~#controls label:nth-child(20),
+#slide1:checked~#controls label:nth-child(19),
+#slide1:checked~#controls label:nth-child(18),
+#slide1:checked~#controls label:nth-child(17),
+#slide1:checked~#controls label:nth-child(16),
+#slide1:checked~#controls label:nth-child(15),
+#slide1:checked~#controls label:nth-child(14),
+#slide1:checked~#controls label:nth-child(13),
+#slide1:checked~#controls label:nth-child(12),
+#slide1:checked~#controls label:nth-child(10),
+#slide1:checked~#controls label:nth-child(9),
+#slide1:checked~#controls label:nth-child(8),
+#slide1:checked~#controls label:nth-child(7),
+#slide1:checked~#controls label:nth-child(6),
+#slide1:checked~#controls label:nth-child(5), */
+#slide2:checked~#controls label:nth-child(3),
+#slide3:checked~#controls label:nth-child(4),
+#slide4:checked~#controls label:nth-child(1) {
+  background: url('./images/keyboard-right-arrow-button-1_icon-icons.com_72690.svg') no-repeat;
+  float: right;
+  margin: -10px -70px 0 0;
+  display: block;
+  background-size: 50px;
+}
+
+#slide1:checked~#controls label:nth-child(1),
+#slide2:checked~#controls label:nth-child(4),
+#slide3:checked~#controls label:nth-child(3),
+#slide4:checked~#controls label:nth-child(2) {
+  background: url('./images/keyboard-left-arrow-button_icon-icons.com_72692.svg') no-repeat;
+  float: left;
+  margin: -10px 0 0 -70px;
+  display: block;
+  background-size: 50px;
+}
+
+#bullets {
+  margin: 150px 0 0;
+  text-align: center;
+}
+
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+
+#slide1:checked~#bullets label:nth-child(1),
+#slide2:checked~#bullets label:nth-child(2),
+#slide3:checked~#bullets label:nth-child(3),
+#slide4:checked~#bullets label:nth-child(4) {
+  background: #444;
+}
+
+@media screen and (max-width:900px) {
+
+  #slide1:checked~#controls label:nth-child(2),
+  #slide2:checked~#controls label:nth-child(3),
+  #slide3:checked~#controls label:nth-child(4),
+  #slide4:checked~#controls label:nth-child(1),
+  #slide1:checked~#controls label:nth-child(2),
+  #slide2:checked~#controls label:nth-child(3),
+  #slide3:checked~#controls label:nth-child(4),
+  #slide4:checked~#controls label:nth-child(1) {
+    margin: 0;
+  }
+
+  #slides {
+    max-width: calc(100% - 140px);
+    margin: 0 auto;
   }
 }
