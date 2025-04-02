@@ -134,6 +134,7 @@ body {
   line-height: 1.6;
   text-align: justify;
   padding-left: 4cm;
+  padding-right: 4cm;
 }
 
 .resume-button {
@@ -211,6 +212,66 @@ body {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width:800px) {
+  .container p {
+    line-height: 1.6;
+    text-align: justify;
+    padding-left: 0.5cm;
+    padding-right: 1cm;
+  }
+
+  .resume-button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    animation: slideIn 1s ease-in-out;
+    margin-left: 4cm;
+  }
+
+  .education {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-top: 1cm;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: max-content;
+  }
+
+  .education h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1cm;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .education-items {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding-left: -1cm;
+  }
+
+  .education-items div {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5cm 2cm;
+    border-collapse: collapse;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .education-items div li {
+    text-align: left;
   }
 }
 
@@ -350,14 +411,14 @@ label #cancel:hover {
     display: none;
     right: -250px;
     /* Change from left to right */
-    width: 550px;
+    width: 850px;
     height: 100%;
     background: #2c3031;
   }
 
   label #btn {
-    right: -40px;
-    top: 47px;
+    right: 350px;
+    top: 45px;
   }
 
   label #cancel {
@@ -387,7 +448,7 @@ label #cancel:hover {
   }
 
   #check:checked~label #cancel {
-    right: 150px;
+    right: 500px;
   }
 }
 
@@ -483,13 +544,8 @@ label #cancel:hover {
     box-sizing: border-box;
   }
 
-  .card-container {
-    margin-left: 0;
-    width: 890px;
-  }
-
   #project-heading {
-    margin-left: 40px;
+    font-size: 1.5rem;
   }
 
   #backtoTop {
@@ -498,12 +554,12 @@ label #cancel:hover {
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 550px) {
   .contact-links div {
     flex-direction: column;
     width: 100%;
     /* Single column for smaller screens */
-    padding: 1.5cm;
+    padding: 1cm;
     font-size: 1.2rem;
   }
 
