@@ -78,6 +78,32 @@ body {
   box-shadow: 2px 0px rgba(0, 0, 0, 0.671);
 }
 
+@media (max-width:800px) {
+
+  .left-column h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    margin-top: 1cm;
+  }
+
+  .left-column h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+  }
+
+  .left-column button {
+    margin: 3px;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .right-column img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /*resume.html*/
 .resume {
   font-family: Arial, sans-serif;
@@ -317,6 +343,54 @@ label #cancel:hover {
   text-decoration: none;
 }
 
+@media (max-width:800px) {
+  .sidebar {
+    z-index: 1110;
+    position: fixed;
+    display: none;
+    right: -250px;
+    /* Change from left to right */
+    width: 550px;
+    height: 100%;
+    background: #2c3031;
+  }
+
+  label #btn {
+    right: -40px;
+    top: 47px;
+  }
+
+  label #cancel {
+    z-index: 1111;
+    display: none;
+    /*right: 20px;  Align cancel button to the right */
+    top: 27px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 9px 12px;
+    transition: all .5s ease;
+    border-radius: 50%;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  label #cancel:hover {
+    background-color: #313334;
+    padding: 9px 12px;
+    border-radius: 50%;
+    border: #000000 1px solid;
+  }
+
+  #check:checked~label #btn {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #check:checked~label #cancel {
+    right: 150px;
+  }
+}
+
 /* projects */
 .projects {
   background-color: #F4EAE0;
@@ -394,6 +468,56 @@ label #cancel:hover {
 .card-back img {
   border-radius: 15px;
 }
+
+@media screen and (max-width: 800px) {
+  .contact-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-links div {
+    width: 50%;
+    /* Two columns */
+    padding: 1.2cm;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .card-container {
+    margin-left: 0;
+    width: 890px;
+  }
+
+  #project-heading {
+    margin-left: 40px;
+  }
+
+  #backtoTop {
+    padding: 0.1cm 0.2cm;
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contact-links div {
+    flex-direction: column;
+    width: 100%;
+    /* Single column for smaller screens */
+    padding: 1.5cm;
+    font-size: 1.2rem;
+  }
+
+  .card-container {
+    margin-left: 0;
+  }
+
+  #backtoTop {
+    padding: 0.1cm 0.2cm;
+    font-size: 0.5rem;
+  }
+}
+
+
 
 /*utt-anthariya*/
 .project-1 {
@@ -505,7 +629,6 @@ label #cancel:hover {
 
 .card-item-left-u {
   background-color: #313334;
-  /* padding: 10px; */
   flex: 95%;
   border-right: #000 1px solid;
   border-radius: 15px;
@@ -520,11 +643,13 @@ label #cancel:hover {
 .card-item-right-u {
   background-color: #313334;
   color: white;
+  flex: 5%;
   border-radius: 15px;
 }
 
 .card-item-right-u p {
-  /* margin: 40px; */
+  margin: 0;
+  padding: 0;
   text-align: right;
   margin-top: 3.2cm;
   writing-mode: vertical-lr;
