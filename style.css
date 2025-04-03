@@ -151,6 +151,7 @@ body {
 
 .resume-button:hover {
   background-color: #444;
+  text-decoration: none;
 }
 
 .education {
@@ -234,46 +235,73 @@ body {
     animation: slideIn 1s ease-in-out;
     margin-left: 4cm;
   }
+}
 
+@media (max-width: 600px) {
   .education {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    margin-top: 1cm;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: max-content;
-  }
-
-  .education h2 {
-    text-align: center;
-    font-size: 1.4rem;
-    margin-top: 1cm;
-    animation: fadeIn 2s ease-in-out;
+    width: 100%;
+    padding: 25px;
   }
 
   .education-items {
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    padding-left: -1cm;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
   }
 
   .education-items div {
-    text-align: center;
-    font-size: 1rem;
-    padding: 0.5cm 2cm;
-    border-collapse: collapse;
-    color: white;
-    animation: fadeIn 2s ease-in-out;
+    padding: 40px;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .education h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-items ul {
+    padding: 0;
   }
 
   .education-items div li {
-    text-align: left;
+    text-align: center;
+  }
+
+  .resume .sidebar {
+    width: 400px;
+  }
+
+  .resume label #cancel {
+    z-index: 1111;
+    display: none;
+    /*right: 20px;  Align cancel button to the right */
+    top: 27px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 9px 12px;
+    transition: all .5s ease;
+    border-radius: 50%;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .resume label #cancel:hover {
+    background-color: #313334;
+    padding: 9px 12px;
+    border-radius: 50%;
+    border: #000000 1px solid;
+  }
+
+  .resume #check:checked~label #btn {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .resume #check:checked~label #cancel {
+    right: 20px;
   }
 }
+
 
 /*navbar*/
 
@@ -411,13 +439,20 @@ label #cancel:hover {
     display: none;
     right: -250px;
     /* Change from left to right */
-    width: 850px;
+    width: 780px;
     height: 100%;
     background: #2c3031;
   }
 
+  .sidebar ul a i {
+    margin-right: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+
   label #btn {
-    right: 350px;
+    right: 330px;
     top: 45px;
   }
 
@@ -448,7 +483,7 @@ label #cancel:hover {
   }
 
   #check:checked~label #cancel {
-    right: 500px;
+    right: 510px;
   }
 }
 
@@ -545,7 +580,7 @@ label #cancel:hover {
   }
 
   #project-heading {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   #backtoTop {
