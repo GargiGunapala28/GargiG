@@ -439,7 +439,7 @@ label #cancel:hover {
     display: none;
     right: -250px;
     /* Change from left to right */
-    width: 780px;
+    width: 840px;
     height: 100%;
     background: #2c3031;
   }
@@ -483,7 +483,7 @@ label #cancel:hover {
   }
 
   #check:checked~label #cancel {
-    right: 510px;
+    right: 550px;
   }
 }
 
